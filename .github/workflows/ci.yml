@@ -14,9 +14,8 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: ${{ matrix.java-version }}
-      - run: |
-          echo $PATH
-          java -version
-          ./gradlew --version
+      - run: echo $PATH
+      - run: java -version
+      - run: ./gradlew --version
       - run: ./gradlew check
 
