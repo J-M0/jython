@@ -2,11 +2,11 @@ on: [push, pull_request]
 
 jobs:
   test:
-    strategy:
     runs-on: ${{ matrix.os }}
-    matrix:
-      os: [ubuntu-latest, macos-latest]
-      java-version: ['11', '14']
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        java-version: ['11', '14']
 
     steps:
       - uses: actions/checkout@v2
